@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda' //加上这句加,入plugin声明
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+
+    dataBinding {
+        enabled true
+    }
+
+    defaultConfig {
+        applicationId "com.yc.baisibudejie"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "2.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        //使用JAVA8语法解析
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+retrolambda {
+    //指定将源码编译的级别，使用下列代码，会将代码编译到兼容1.6的字节码格式
+    javaVersion JavaVersion.VERSION_1_6
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:design:24.2.0'
+
+    // 图片缓存框架
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile project(':gallery')
+    compile project(':jcvideoplayer-lib')
+    compile project(':rxvolley')
+
+    //增加左滑退出activity的库
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    //添加权限管理的库
+    compile 'com.github.k0shk0sh:PermissionHelper:1.0.13'
+    //播放器相关
+    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.6.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.6.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.6.0'
+
+    //recycleview
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.6.2'
+    //cardview
+    compile 'com.android.support:cardview-v7:24.2.0'
+    // 加载大图
+    compile 'com.shizhefei:LargeImageView:1.0.9'
+}

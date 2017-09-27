@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="colorPrimary">@color/status_bar_day</item>
+        <item name="colorPrimaryDark">@color/status_bar_day</item>
+    </style>
+
+    <style name="LoadingActivityTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="ImageActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="button_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_button_ok_selector</item>
+    </style>
+
+    <style name="textview_common">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ActivityTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="theme_day" parent="Theme.AppCompat.NoActionBar">
+        <item name="tab_bg">@color/tab_background_day</item>
+        <item name="colorPrimaryDark">@color/status_bar_day</item>
+        <item name="item_bg">@color/item_background_day</item>
+        <item name="text_color">@color/text_color_day</item>
+        <item name="divide_line_bg">@color/divider_color_day</item>
+        <item name="action_bar_bg">@color/status_bar_day</item>
+        <item name="colorPrimary">@color/status_bar_day</item>
+        <item name="action_bar_text_color">@color/action_bar_text_color_day</item>
+        <item name="action_bar_divide_line">@color/action_bar_divider_line_day</item>
+        <item name="recycle_bg">@drawable/button_selector</item>
+        <item name="pull_to_refresh_bg">@color/recycle_item_background_day</item>
+    </style>
+
+    <style name="theme_night" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/status_bar_night</item>
+        <item name="tab_bg">@color/tab_background_night</item>
+        <item name="colorPrimaryDark">@color/status_bar_night</item>
+        <item name="item_bg">@color/item_background_night</item>
+        <item name="text_color">@color/text_color_night</item>
+        <item name="divide_line_bg">@color/divider_color_night</item>
+        <item name="action_bar_bg">@color/status_bar_night</item>
+        <item name="action_bar_text_color">@color/action_bar_text_color_night</item>
+        <item name="action_bar_divide_line">@color/action_bar_divider_line_night</item>
+        <item name="recycle_bg">@drawable/button_click_select</item>
+        <item name="pull_to_refresh_bg">@color/recycle_item_background_night</item>
+    </style>
+</resources>
