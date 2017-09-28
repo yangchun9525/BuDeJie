@@ -26,6 +26,51 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    productFlavors {
+        baidu {}
+        anzhuo {}
+        _91 {}
+        xiaomi {}
+        pugy {}
+        yybao {}
+        meizu {}
+        wandou {}
+        anzhi {}
+        lxle {}
+        huawei {}
+        sougou {}
+        oppo {}
+        pp {}
+        mumayi {}
+        lxwo {}
+        nduo {}
+        jifeng {}
+        _360 {}
+        keke {}
+
+
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    def version_name = defaultConfig.versionName;
+    def version_code = defaultConfig.versionCode;
+
+    //修改生成的apk名字
+    applicationVariants.all{ variant->
+        variant.outputs.each { output->
+            def oldFile = output.outputFile
+            if(variant.buildType.name.equals('release')){
+                def releaseApkName = 'baisibudejie' + '_' + variant.productFlavors[0].name + '_' + version_name + '.' + version_code + '.apk'
+                output.outputFile = new File(oldFile.parent, releaseApkName)
+            }
+        }
+    }
 }
 retrolambda {
     //指定将源码编译的级别，使用下列代码，会将代码编译到兼容1.6的字节码格式
