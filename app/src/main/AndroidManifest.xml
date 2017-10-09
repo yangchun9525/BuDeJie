@@ -15,6 +15,13 @@
         android:name=".GlobalApp"
         tools:replace="name,icon,label,theme">
 
+        <meta-data
+            android:name="design_width"
+            android:value="1080"></meta-data>
+        <meta-data
+            android:name="design_height"
+            android:value="1920"></meta-data>
+
         <activity
             android:name=".LoadingActivity"
             android:theme = "@style/LoadingActivityTheme"
@@ -26,6 +33,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".module.MainActivity"
+            android:theme = "@style/LoadingActivityTheme"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            >
         </activity>
 
         <!-- broadcast reveiver -->

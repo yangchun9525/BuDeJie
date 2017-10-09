@@ -7,8 +7,9 @@ import android.view.View;
 
 import com.yc.baisibudejie.R;
 import com.yc.baisibudejie.utils.SharedPreferencesMgr;
+import com.zhy.autolayout.AutoLayoutActivity;
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AutoLayoutActivity {
     protected abstract void findView();
 
     protected abstract void setViewSize();

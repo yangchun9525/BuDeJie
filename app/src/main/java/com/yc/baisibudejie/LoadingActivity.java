@@ -8,6 +8,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.yc.baisibudejie.base.BaseActivity;
+import com.yc.baisibudejie.module.MainActivity;
 
 /**
  * Created by YangChun on 2016/4/21.
@@ -69,8 +70,8 @@ public class LoadingActivity extends BaseActivity implements Animation.Animation
 
     @Override
     public void onAnimationEnd(Animation animation) {
-//        startActivity(new Intent(LoadingActivity.this, MainListViewActivity.class));
-//        this.finish();
+        startActivity(new Intent(LoadingActivity.this, MainActivity.class));
+        this.finish();
     }
 
     @Override
